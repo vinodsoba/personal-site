@@ -1,0 +1,27 @@
+@import './base/variables.scss';
+.header {
+    position: relative;
+    padding: 10px;
+
+    &__container {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+
+
+        .logo {
+            &__image {
+                background-color: transparent;
+            }
+        }
+    }
+
+    
+    
+    nav {
+        ul {
+            display: flex;
+        }
+    }
+    
+}

@@ -1,4 +1,9 @@
 /wp-content/reactpress/apps/vinodsoba/node_modules
+/wp-content/themes/react/node_modules
+/wp-content/themes/test-react/node_modules
+/wp-content/themes/react/build
+/wp-content/themes/test-react/build
 wp-config.php*
 
 /db-backup*
+
