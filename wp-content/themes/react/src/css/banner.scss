@@ -1,0 +1,32 @@
+@import './base/variables.scss';
+
+.homepage-title {
+    position: absolute;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+
+        h2 {
+            color: $white;
+            font-size: $font-size-large;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        h4 {
+            color: $white;
+            font-size: $font-size-xlarge;
+            line-height: 28px;
+        }
+    }
+}
+
+#banner-title {
+    text-align: center;
+    h2, h4 {
+        line-height: 70.2px; 
+    }
+    
+}
