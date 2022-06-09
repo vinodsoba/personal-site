@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './Logo';
 import styled  from 'styled-components';
+import Navigation from './Nav';
 
 
 
@@ -36,6 +37,7 @@ class Header extends Component {
             <HeaderContainer style={{ backgroundImage : "url(${acf})" }} >
                     <Logo />
                     <Button bg="white">My Button</Button>
+                    <Navigation />
             </HeaderContainer>       
         );
         

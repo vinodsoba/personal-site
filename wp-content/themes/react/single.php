@@ -1,1 +1,1 @@
-this is my skills page
+this is for blog posts
