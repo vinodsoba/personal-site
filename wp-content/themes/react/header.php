@@ -3,6 +3,7 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
@@ -15,7 +16,7 @@
       <?php
     } else {
       ?>
-      <header class="header__container" style="background-color: #0f32c9;')">
+      <header class="header__container section" style="background-color: #0f32c9;')">
     <?php
     }
     ?>
@@ -40,9 +41,9 @@
               ?>
               <div class="homepage-title__container">
               <?php
-                get_template_part( 'modules/page-home-banner' );
+                get_template_part( 'template-parts/page-home-banner' );
               ?>
-              </div>
+             
               <?php
             } else {
                 $bannerTitle = get_field('header_title');
@@ -77,4 +78,8 @@
               <?php
             }
           ?>
+            <div class="down-arrow">
+            <a href="#section1"><i class="fa-solid fa-arrow-down"></i> </a>
+          </div>
+          </div>
     </header>
