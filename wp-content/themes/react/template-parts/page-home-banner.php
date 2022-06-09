@@ -5,7 +5,7 @@ $bannerDesc = get_field('sub_header_title');
 $button = get_field('cta_banner');
 ?>
 
-<div class="homepage-banner__container row pt2">
+<div class="homepage-banner__container row mt7 mb8">
 <div id="banner-title">
 
     <h2><?php echo $bannerTitle; ?></h2>

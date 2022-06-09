@@ -37,6 +37,7 @@ function university_post_types() {
    ));
 
    // Professor Post Type
+
    register_post_type( 'professor', array(
       'show_in_rest' => true,
       'supports' => array('title', 'editor', 'thumbnail'),
@@ -56,9 +57,50 @@ add_action('init', 'university_post_types');
 
 
 function skills_post_type() {
+
+    // Portfolio Post Type
+    register_post_type( 'portfolio', array(
+      'show_in_rest' => true,
+      'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('category', 'post_tag'),
+      'rewrite' => array('slug' => 'portfolio'),
+      'has_archive' => true,
+      'public' => true,
+      'labels' => array(
+         'name' => 'Portfolio',
+         'add_new_item' => 'Add New Portfolio',
+         'edit_item' => 'Edit Portfolio',
+         'all_items' => 'All Portfolio',
+         'singular_name' => 'Portfolio'
+      ),
+      'menu_icon' => 'dashicons-portfolio'
+      
+   ));
+
+   // Services Post Type
+   register_post_type( 'service', array(
+      'show_in_rest' => true,
+      'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('category', 'post_tag'),
+      'rewrite' => array('slug' => 'services'),
+      'has_archive' => true,
+      'public' => true,
+      'labels' => array(
+         'name' => 'Services',
+         'add_new_item' => 'Add New Service',
+         'edit_item' => 'Edit Service',
+         'all_items' => 'All Services',
+         'singular_name' => 'Service'
+      ),
+      'menu_icon' => 'dashicons-admin-generic'
+      
+   ));
+
+   // Skill Post Type
    register_post_type( 'skill', array(
       'show_in_rest' => true,
       'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'taxonomies' => array('category', 'post_tag'),
       'rewrite' => array('slug' => 'skills'),
       'has_archive' => true,
       'public' => true,
@@ -72,6 +114,7 @@ function skills_post_type() {
       'menu_icon' => 'dashicons-hammer'
       
    ));
+
 }
 
 

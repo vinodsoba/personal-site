@@ -1,8 +1,5 @@
 <?php
 
-wp_enqueue_script( 'react', '//unpkg.com/react@18/umd/react.development.js');
-wp_enqueue_script( 'react-dom', '//unpkg.com/react-dom@18/umd/react-dom.development.js');
-
 get_header(); ?>
  <!-- example react component -->
  <div id="root"></div>

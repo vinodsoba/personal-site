@@ -1,18 +1,5 @@
 @import './base/variables.scss';
 
-.section-title {
-    text-align: center;
-    h1 {
-        @include mainTitle;
-    }
-
-    p {
-        line-height: 1.2em;
-    }
-
-}
-
-
 .skill {  
     &__container {
         padding-top: 1rem;
@@ -20,10 +7,18 @@
         justify-content: space-between;
         flex-direction: row-reverse;
 
+        .card {
+            border: none;
+        }
+
         .card-image img {
             width: 100% !important;
             height: auto !important;
             max-width: 100%;
+        }
+
+        .card-title {
+            text-align: center;
         }
     }
 

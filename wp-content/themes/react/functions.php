@@ -2,9 +2,12 @@
 
 function boilerplate_load_assets() {
   wp_enqueue_script('ourmainjs', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
-  wp_enqueue_script('customjs', get_theme_file_uri('custom.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('ourmaincss', get_theme_file_uri('/build/index.css'));
+  wp_enqueue_style( 'animate', '//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
   wp_enqueue_style('bootstrap', '//cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css');
+  wp_enqueue_style( 'fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+  wp_enqueue_script('customjs', get_theme_file_uri('custom.js'), array('jquery'), '1.0', true);
+  
 }
 
 add_action('wp_enqueue_scripts', 'boilerplate_load_assets');
@@ -17,7 +20,7 @@ function boilerplate_add_support() {
 
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
-  add_image_size('professorLandscape', 280, 400, true);
+  add_image_size('professorLandscape', 636, 464, true);
   add_image_size( 'professorPortrait', 480, 650, true);
 }
 
