@@ -22,12 +22,12 @@ while($myServices->have_posts()) {
 
 <div class="col-md-2">
     <div class="myservices__image px2 py2">
-        <?php the_post_thumbnail('professorPortrait')?>
+       <a href="<?php the_permalink()?>"> <?php the_post_thumbnail('professorPortrait')?></a>
     </div>
 </div>
 <div class="col-md-4">
 <div class="myservices__title px2 py2">
-    <h2><?php the_title(); ?></h2>
+    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
     <p><?php the_content(); ?></p>
 </div>
 </div>
