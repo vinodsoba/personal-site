@@ -58,6 +58,8 @@
         </div>
       </div>
     </footer>
+
+    <div class="search-overlay">hello 123</div> 
     <?php wp_footer(); ?>
 </body>
 </html>

@@ -30,8 +30,17 @@
         }
             
             
-    }
-    }   
+            }
+        }
+        
+        .search-trigger {
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 46px;
+            right: 16px;
+        }
     }
 }
 
