@@ -20,9 +20,9 @@ while($myPortfolio->have_posts()) {
 
 ?> 
 
-<div class="col-md-6">
+<div class="col-md-6 items">
     <div class="myportfolio__image px2 py2">
-        <?php the_post_thumbnail('professorLandscape')?>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('professorLandscape')?></a>
     </div>
 </div>
       

@@ -11,10 +11,8 @@ $button = get_field('cta_banner');
     <h2><?php echo $bannerTitle; ?></h2>
     <h4><?php echo $bannerDesc; ?></h4>
 
-    <div class="button__homepage-banner">
+    <div class="button__homepage-banner py2">
         <a href="<?php echo $button; ?>">My Portfolio</a>
     </div>
 </div>
 </div>
-
-

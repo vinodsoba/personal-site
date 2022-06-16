@@ -19,7 +19,8 @@ while($skillContent->have_posts()){
             <div class="card-body">
                 <div class="card-image"><?php echo the_post_thumbnail('professorPortrait'); ?></div>
                 <p class="card-text"><?php echo get_the_content(); ?></p>
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary">View More</a>
+                <div class="button__homepage-banner">
+                <a href="<?php the_permalink(); ?>">View More</a></div>
             </div>
         </div>   
     <?php

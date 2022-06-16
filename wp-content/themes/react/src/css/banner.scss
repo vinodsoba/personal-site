@@ -28,6 +28,31 @@
     text-align: center;
     h2, h4 {
         line-height: 70.2px; 
+        color: $white;
+
+        
     }
+
+    h2 {
+        animation-name: moveInLeft;
+        animation-duration: 2.0s;
+        font-size: $font-size-xlarge;
+    }
+
+    h4 {
+        animation-name: moveInRight;
+        animation-duration: 2.0s;
+        font-size: $font-size-large; 
+    }
+    .button {
+        &__homepage-banner {
+            animation-name: moveInUp;
+            animation-duration: 1.5s;
+        }
+    }
+        
+
+    
     
 }
+

@@ -2,6 +2,9 @@
 @import 'base/variables';
 @import 'base/baseline';
 
+
+
+
 @import 'btn';
 @import 'default';
 @import 'navigation';
@@ -9,5 +12,12 @@
 @import 'banner';
 @import 'about-us';
 @import 'frontpage';
+@import 'footer';
 @import 'section-myskills';
 @import 'section-services';
+@import 'section-portfolio';
+
+/* components */
+@import 'search-overlay';
+@import 'animation';
+

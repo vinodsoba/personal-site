@@ -1,0 +1,29 @@
+section.my-animation {
+    position: relative;
+   
+    .animation-canvas {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom:0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: scale(1.09);
+        transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.96);
+
+        .animation-wrapper {
+            height: 100vh;
+        }
+    }
+
+    canvas {
+        height:60vh;
+        
+    }
+
+    
+}
+

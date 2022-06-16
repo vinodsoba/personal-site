@@ -1,14 +1,16 @@
 $black: #000000;
 $white: #fff;
 $green: #579381;
+$green--light: #96cfbe;
 $title-green: #67E0BC;
 $grey: #ddd;
+$blend-grey: #4e494e;
 
 
-$font-size-large: 48px; 
+$font-size-large: 2rem; 
 $font-size-medium: 24px;
 $font-size-small: 14px;
-$font-size-xlarge: 2rem;
+$font-size-xlarge: 3rem;
 
 @mixin btn {
     background-color: $green;
@@ -21,3 +23,45 @@ $font-size-xlarge: 2rem;
     color: $black;
 }
 
+
+// animations 
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(+100px);
+    }
+    80% {
+   
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
