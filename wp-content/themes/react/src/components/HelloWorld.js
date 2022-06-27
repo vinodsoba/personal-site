@@ -1,5 +1,5 @@
 import $ from 'jquery'
-class Search {
+class HelloWorld {
         constructor() {
             this.openButton = $(".js-search-trigger");
             this.searchOverlay = $(".search-overlay");
@@ -15,10 +15,11 @@ class Search {
 
         // 3. method, function action
         openOverlay(){
+            alert("Using Hello World Component");
             this.searchOverlay.addClass("search-overlay--active");
         }
 
     
     }
 
-export default Search;
+export default HelloWorld;

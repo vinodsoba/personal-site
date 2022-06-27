@@ -82,6 +82,7 @@
   background-color: #579381;
   padding: 9px 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
   color: #fff;
   text-decoration: none;
 }
@@ -239,6 +240,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body, html {
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal;
 }
 
 img {
@@ -639,17 +646,57 @@ h1.section-title {
 
 .top-nav {
   width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+.top-nav .search .search-trigger {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  color: #fff;
+}
+.top-nav .search .search-trigger > i:before {
+  color: #fff;
+}
+.top-nav .col-md-7 {
+  width: 66.333333%;
 }
 .top-nav nav {
-  width: 400px;
+  display: flex;
+  justify-content: end;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  .top-nav nav.nav__menu {
+    visibility: hidden;
+    transform: translateY(-20%);
+  }
+  .top-nav nav.nav__menu--active {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #579381;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(0);
+    background-color: #579381;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    z-index: 11;
+  }
 }
 .top-nav nav ul {
   display: flex;
-  justify-content: space-evenly;
+}
+@media (max-width: 960px) {
+  .top-nav nav ul {
+    display: block;
+  }
 }
 .top-nav nav ul li {
   list-style: none;
@@ -658,6 +705,7 @@ h1.section-title {
 .top-nav nav ul li a {
   color: #fff;
   text-decoration: none;
+  margin-right: 20px;
 }
 .top-nav nav ul li a:hover {
   display: block;
@@ -666,13 +714,21 @@ h1.section-title {
 .top-nav nav ul li .sub-menu {
   display: none;
 }
-.top-nav nav .search-trigger {
-  cursor: pointer;
+.top-nav .mobile-menu {
+  display: none;
+  padding-right: 30px;
+}
+.top-nav .mobile-menu i:before {
   color: #fff;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 46px;
-  right: 16px;
+}
+@media (max-width: 960px) {
+  .top-nav .mobile-menu {
+    visibility: visible;
+    opacity: 1;
+    flex-direction: row-reverse;
+    display: flex;
+    position: absolute;
+  }
 }
 
 @keyframes moveInLeft {
@@ -807,22 +863,43 @@ h1.section-title {
   line-height: 28px;
 }
 
+@media (max-width: 960px) {
+  .homepage-banner__container {
+    position: absolute;
+    top: 108px;
+  }
+}
+
 #banner-title {
   text-align: center;
 }
-#banner-title h2, #banner-title h4 {
+#banner-title h2 {
   line-height: 70.2px;
+  font-size: 3rem;
   color: #fff;
+}
+@media (max-width: 960px) {
+  #banner-title h2 {
+    font-size: 1.7rem;
+  }
+}
+#banner-title h4 {
+  line-height: 70.2px;
+  font-size: 2rem;
+  color: #fff;
+}
+@media (max-width: 960px) {
+  #banner-title h4 {
+    font-size: 1.7rem;
+  }
 }
 #banner-title h2 {
   animation-name: moveInLeft;
   animation-duration: 2s;
-  font-size: 3rem;
 }
 #banner-title h4 {
   animation-name: moveInRight;
   animation-duration: 2s;
-  font-size: 2rem;
 }
 #banner-title .button__homepage-banner {
   animation-name: moveInUp;
@@ -887,8 +964,14 @@ h1.section-title {
   background-color: #579381;
   padding: 9px 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
   color: #fff;
   text-decoration: none;
+}
+.about__container .about-us-banner__container #banner-title .button__about-banner a:hover {
+  color: #fff;
+  background-color: #96cfbe;
+  transition: all 0.5s ease-in-out;
 }
 .about__container .about-us-banner__container #banner-title .button__about-banner a:hover {
   background-color: beige;
@@ -966,6 +1049,11 @@ h1.section-title {
   justify-content: space-between;
   flex-direction: row-reverse;
 }
+@media (max-width: 960px) {
+  .skill__container {
+    justify-content: center;
+  }
+}
 .skill__container .card {
   border: none;
 }
@@ -1015,10 +1103,15 @@ h1.section-title {
   }
 }
 footer {
+  font-family: "Roboto Mono", sans-serif, helvetica;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 33vh;
+  height: auto;
 }
 footer li {
   list-style: none;
@@ -1028,8 +1121,38 @@ footer li.menu-item-type-custom {
   padding-bottom: 1em;
 }
 footer a {
-  color: #579381;
+  color: #fff;
   text-decoration: none;
+}
+footer .flex-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer .footer-section {
+  flex-direction: row;
+}
+footer .footer-section .button_home {
+  background-color: #579381;
+  padding: 9px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  width: 223px;
+}
+footer .footer-section .button_home:hover {
+  color: #fff;
+  background-color: #96cfbe;
+  transition: all 0.5s ease-in-out;
+}
+footer .footer-section .button_home a {
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-section .item-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #section1 {
@@ -1094,6 +1217,7 @@ footer a {
     column-count: 1;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 }
 .myservices h1 {
@@ -1116,13 +1240,14 @@ footer a {
     text-align: center;
   }
 }
-.myservices__title {
-  color: #67E0BC;
-}
 @media (max-width: 960px) {
   .myservices__title {
     font-size: 14px;
   }
+}
+.myservices__title h2 {
+  color: #67E0BC;
+  font-size: 24px;
 }
 
 .hide-opacity {
@@ -1140,6 +1265,24 @@ footer a {
   animation-name: moveInRight;
   animation-duration: 2s;
   animation-delay: 0.5s;
+}
+
+.myanimation__container a {
+  background-color: #579381;
+  padding: 9px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #fff;
+}
+.myanimation__container a:hover {
+  color: #fff;
+  background-color: #96cfbe;
+  transition: all 0.5s ease-in-out;
+}
+
+.flex-container p {
+  font-family: inherit;
+  font-size: 1.2rem;
 }
 
 /* components */

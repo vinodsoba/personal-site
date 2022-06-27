@@ -6,12 +6,6 @@
             @include btn;
                 color: $white;
                 text-decoration: none;
-
-            &:hover {
-                color: $white;
-                background-color: $green--light;
-                transition: all 0.5s ease-in-out;
-            }
         }
     
     }
