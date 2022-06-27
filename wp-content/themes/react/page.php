@@ -5,7 +5,7 @@ while(have_posts()) {
     the_post();
 ?>
 
-<div><?php the_content(); ?></div>
+<div class="container py2" style="text-align: center"><?php the_content(); ?></div>
 <?php
 }
 ?>

@@ -15,6 +15,7 @@
             column-count: 1;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
         
     }
@@ -45,11 +46,18 @@
     }
 
     &__title {
-        color: $title-green;
+        
         @include atMedium {
             font-size: $font-size-small;
             
         }
+
+         
+        h2 {
+            color: $title-green;
+            font-size: $font-size-medium;
+        }
+        
     }
 }
 

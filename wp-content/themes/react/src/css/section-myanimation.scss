@@ -1,0 +1,8 @@
+.myanimation {
+    &__container {
+        a {
+            @include btn;
+            color: $white;
+        }
+    }
+}

@@ -1,13 +1,18 @@
-import './../css/main.scss';
-import React from "react"
+class TestComponent {
+    constructor(){
+    this.openButton = document.querySelector(".click-me")
+    this.events()
+    }
 
-function TestComponent() {
-    return (  
-        <div className="test">
-            <h1>Hello</h1>
-            <p>Hello Again This is React</p>
-        </div>
-    )
+    events(){
+        this.openButton.addEventListener("click", () => this.openMenu())
+    }
+
+    openMenu(){
+        console.log("Test Component is Working");
+    }
+    
+
 }
 
 export default TestComponent;
