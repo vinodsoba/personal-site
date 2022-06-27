@@ -6,7 +6,7 @@ const MiniCssPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/js/animation.js', './src/css/main.scss'],
+  entry: ['./src/index.js', './src/css/main.scss'],
   output: {
     path: __dirname + '/dist/',
     filename: './js/animation.bundle.js'

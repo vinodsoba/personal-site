@@ -7,15 +7,24 @@ $grey: #ddd;
 $blend-grey: #4e494e;
 
 
+$font-size-screen-medium: 1.7rem;
 $font-size-large: 2rem; 
 $font-size-medium: 24px;
 $font-size-small: 14px;
 $font-size-xlarge: 3rem;
+$font-size-p: 1.2rem;
 
 @mixin btn {
     background-color: $green;
     padding: 9px 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+        background-color: $green--light;
+        transition: all 0.5s ease-in-out;
+    }
 }
 
 @mixin mainTitle {

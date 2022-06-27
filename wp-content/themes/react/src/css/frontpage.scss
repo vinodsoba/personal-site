@@ -7,6 +7,10 @@
         justify-content: space-between;
         flex-direction: row-reverse;
 
+            @include atMedium {
+                justify-content: center;
+            }
+
         .card {
             border: none;
         }

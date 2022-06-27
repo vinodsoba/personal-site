@@ -1,13 +1,17 @@
+import background from "./../img/background_layer_1.png"
 import platformGrass from "./../img/platform-grass.png"
-
+import dune from "./../img/dune2.png"
+import vinnySlides from './../img/vinny-slides.png'
+import vinnyFacingLeft from "./../img/vinnyFacingLeft.png"
+import vinnyFacingRight from "./../img/vinnyFacingRight.png"
 //console.log(platformGrass);
 // animation character
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = window.innerWidth
-canvas.width = window.innerHeight
+canvas.width = 1500
+canvas.height = 576
 
 const gravity = 1.5
 
@@ -16,9 +20,10 @@ const gravity = 1.5
 
 class Player {
     constructor(){
+        this.speed = 10
         this.position = {
             x: 100,
-            y: 50
+            y: 100
         }
 
         this.velocity = {
@@ -26,16 +31,45 @@ class Player {
             y: 1
         }
 
-        this.width = 30
-        this.height = 30
+        this.width = 157
+        this.height = 206
+
+        this.frameIndex = 0
+
+        this.image = createImage(vinnyFacingRight)
+        this.frames = 0
     }
 
     draw() {
-        c.fillStyle = 'orange'
-        c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        //c.fillStyle = 'red'
+        //c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        c.drawImage(
+            this.image, 
+            this.frameIndex * this.width,
+            0,
+            157,
+            206,
+            this.position.x, 
+            this.position.y, 
+            this.width, 
+            this.height
+        )
+
     }
 
     update() {
+        this.frames++
+        if(this.frames > 20) {
+            this.frameIndex++;
+            this.frames = 0;
+        }
+
+        if(this.frameIndex > 2 ) {
+            this.frameIndex = 0;
+        }
+
+        
+       
         this.draw()
         this.position.y += this.velocity.y
         this.position.x += this.velocity.x
@@ -58,10 +92,11 @@ class Platform {
             x,
             y
         }
-        this.width= 200
-        this.height = 20
-
         this.image = image
+        this.width= image.width
+        this.height = image.height
+
+        
 
     }
 
@@ -72,23 +107,68 @@ class Platform {
     }
 }
 
-const image = new Image()
-image.src= platformGrass
+// Generic Object Class
+
+class GenericObject {
+    constructor({ x, y, image}) {
+        this.position = {
+            x,
+            y
+        }
+        this.image = image
+        this.width= image.width
+        this.height = image.height
+    }
+
+    draw() {
+        //c.fillStyle = 'blue'
+        //c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height)
+    }
+}
+
+
+function createImage(imageSrc){
+    const image = new Image()
+    image.src= imageSrc
+    return image
+}
+
+const platformImage = createImage(platformGrass)
 
 const player = new Player()
 const platforms = [
     new Platform({
-        x:200, 
-        y:100,
-        image
+        x:-1, 
+        y:430,
+        image: platformImage
     }), 
+    
     new Platform({ 
-        x: 450, 
-        y: 60,
-        image
+        x: platformImage.width -2, 
+        y: 470,
+        image: platformImage
+    }),
+    new Platform({ 
+        x: platformImage.width * 2 + 100,
+        y: 470,
+        image: platformImage
     })
 ]
 
+const genericObjects = [
+    new GenericObject({
+        x: 0,
+        y: 0,
+        width: .100,
+        image: createImage(background)
+    }),
+    new GenericObject({
+        x: 1,
+        y: 1,
+        image: createImage(dune)
+    })
+]
 
 
 const keys = {
@@ -105,31 +185,45 @@ let scrollOffset = 0
 
 function animate(){
     requestAnimationFrame(animate)
-    c.clearRect(0, 0, canvas.width, canvas.height)
-    player.update()
+    c.fillStyle = "white"
+    c.fillRect(0, 0, canvas.width, canvas.height)
+
+    genericObjects.forEach(genericObject => {
+        genericObject.draw()
+    })
+    
     platforms.forEach((platform) => { 
         platform.draw()
     })
     
+    player.update()
 
     if (keys.right.pressed && player.position.x < 400) {
-        player.velocity.x = 5
+        player.velocity.x = player.speed
     } else if (keys.left.pressed && player.position.x > 100 ) { 
-        player.velocity.x =-5 } 
+        player.velocity.x =- player.speed } 
     else { 
         player.velocity.x = 0
         
         if (keys.right.pressed) {
-            scrollOffset += 5
+            scrollOffset += player.speed
             platforms.forEach((platform) => {
-                platform.position.x -= 5
+                platform.position.x -= player.speed
+            })
+
+            genericObjects.forEach((genericObject) => {
+                genericObject.position.x -= player.speed * .66
             })
             
         } else if ( keys.left.pressed) {
-            scrollOffset -= 5
+            scrollOffset -= player.speed
 
             platforms.forEach((platform) => {
-                platform.position.x += 5
+                platform.position.x += player.speed
+            })
+
+            genericObjects.forEach((genericObject) => {
+                genericObject.position.x += player.speed
             })
         }
     }
@@ -172,7 +266,7 @@ addEventListener('keydown', ( { keyCode} ) => {
 
         case 87: 
         console.log('up')
-        player.velocity.y -= 20
+        player.velocity.y -= 40
         break
     }
 
@@ -200,7 +294,7 @@ addEventListener('keyup', ( { keyCode} ) => {
 
         case 87: 
         console.log('up')
-        player.velocity.y -= 20
+        player.velocity.y -= 10
         break
     }
 

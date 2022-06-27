@@ -18,11 +18,14 @@ $myServices = new WP_Query(array(
 while($myServices->have_posts()) {
     $myServices->the_post();
 
+    
+
 ?> 
 
 <div class="col-md-2">
     <div class="myservices__image px2 py2">
        <a href="<?php the_permalink()?>"> <?php the_post_thumbnail('professorPortrait')?></a>
+       
     </div>
 </div>
 <div class="col-md-4">

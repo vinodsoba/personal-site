@@ -24,25 +24,49 @@
 
 }
 
+.homepage-banner {
+    &__container {
+        @include atMedium {
+            position: absolute;
+            top: 108px;
+        }
+    }
+}
+
 #banner-title {
     text-align: center;
-    h2, h4 {
-        line-height: 70.2px; 
+    h2 {
+        line-height: 70.2px;
+        font-size: $font-size-xlarge; 
         color: $white;
 
+        @include atMedium {
+            font-size: $font-size-screen-medium;
+        }
+
         
+    }
+
+    h4 {
+        line-height: 70.2px;
+        font-size: $font-size-large; 
+        color: $white;
+
+        @include atMedium {
+            font-size: $font-size-screen-medium;
+        }
     }
 
     h2 {
         animation-name: moveInLeft;
         animation-duration: 2.0s;
-        font-size: $font-size-xlarge;
+       
     }
 
     h4 {
         animation-name: moveInRight;
         animation-duration: 2.0s;
-        font-size: $font-size-large; 
+         
     }
     .button {
         &__homepage-banner {
