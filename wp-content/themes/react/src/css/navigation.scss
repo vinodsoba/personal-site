@@ -14,6 +14,15 @@
         & > i:before {
           color: $white;
         }
+      @include atMedium {
+        float: right;
+      }
+      }
+
+    @include atMedium {
+      position: absolute;
+      max-width: 68px;
+      right: 0;
     }
     
   }
@@ -101,7 +110,8 @@
         flex-direction: row-reverse;
         display: flex;
         position: absolute;
-
+        width: 91%;
+        top: 5px;
         
     }
   }  

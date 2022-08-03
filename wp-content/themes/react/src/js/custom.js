@@ -77,7 +77,7 @@
         });
     });
     
-    jQuery(function($) {
+    /*jQuery(function($) {
         $(document).ready(function(){
             $(".js-search-trigger").click(function(){
                 $('.search-overlay').addClass('search-overlay--active');
@@ -99,4 +99,4 @@
                 $('.search-overlay').removeClass('search-overlay--active');
             }
         });
-    });
+    });*/
