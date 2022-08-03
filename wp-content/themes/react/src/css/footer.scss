@@ -49,7 +49,17 @@ footer {
             flex-direction: column;
             align-items: center;
         }
+
+        .item-12 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         
+    }
+
+    .copyright p {
+        font-size: $font-size-footer-copy;
     }
 
 }

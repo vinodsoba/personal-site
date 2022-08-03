@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: About Us
+Template Post Type: post, page, portfolio
 Author: Vinod
 */
 
