@@ -41,7 +41,8 @@
         color: $white;
 
         @include atMedium {
-            font-size: $font-size-screen-medium;
+            font-size: 1.5em;
+            line-height: 57.2px;
         }
 
         
@@ -53,7 +54,8 @@
         color: $white;
 
         @include atMedium {
-            font-size: $font-size-screen-medium;
+            font-size: 1.3em;
+            line-height: 35.2px;
         }
     }
 

@@ -19,18 +19,19 @@
       </div>
 
       <div class="row footer-section  py3">
-        <div class="col-md-6 item-11">
+        <div class="col-md-5 item-11" >
           <h4>Overview</h4>
           <p>I'm a freelance web designer working remotely with clients in London & across the country. If you're looking for a quote, or even just some advice then please don't hesitate to get in touch, I'm here to help!</p>
         </div>
 
-        <div class="col-md-6 item-12">
+        <div class="col-md-7 item-12">
           <h4>REQUEST A QUOTE!</h4>
             <div class="button_home py3">
                 <a href="contact-me">Start your  project</a>
             </div>
         </div>
       </div>
+      <hr />
         
 
         <div class="search-overlay">
@@ -41,8 +42,18 @@
               <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
             </div>
           </div>
+          <div class="container">
+            <div id="search-overlay__results"></div>
+          </div>
         </div>
-        <div class="copyright">This is where copyright info will go</div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="copyright py1"><p>&copy; 2022 Vinod Soba - Web Developer in London & Across the UK. All Rights Reserved.</p></div>
+          </div>
+          <div class="col-md-3">Social Icons</div>
+        </div>
+        
+        
   </div>
 </footer>
 <?php wp_footer(); ?>

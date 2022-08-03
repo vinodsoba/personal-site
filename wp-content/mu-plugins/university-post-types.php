@@ -61,7 +61,7 @@ function skills_post_type() {
     // Portfolio Post Type
     register_post_type( 'portfolio', array(
       'show_in_rest' => true,
-      'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'templates'),
       'taxonomies' => array('category', 'post_tag'),
       'rewrite' => array('slug' => 'portfolio'),
       'has_archive' => true,
