@@ -18,9 +18,9 @@ while($skillContent->have_posts()){
         <h5 class="card-title"><?php echo get_the_title(); ?></h5>
             <div class="card-body">
                 <div class="card-image"><?php echo the_post_thumbnail('professorPortrait'); ?></div>
-                <p class="card-text"><?php echo get_the_content(); ?></p>
+                <p class="card-text"><?php echo the_content(); ?></p>
                 <div class="button__homepage-banner">
-                <a href="<?php the_permalink(); ?>">View More</a></div>
+                </div>
             </div>
         </div>   
     <?php
