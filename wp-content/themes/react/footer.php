@@ -21,7 +21,7 @@
       <div class="row footer-section  py3">
         <div class="col-md-5 item-11" >
           <h4>Overview</h4>
-          <p>I'm a freelance web designer working remotely with clients in London & across the country. If you're looking for a quote, or even just some advice then please don't hesitate to get in touch, I'm here to help!</p>
+          <p>I'm a freelance web designer/developer working remotely with clients in London & across the country. If you're looking for a quote, or even just some advice then please don't hesitate to get in touch, I'm here to help!</p>
         </div>
 
         <div class="col-md-7 item-12">
