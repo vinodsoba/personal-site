@@ -1,0 +1,8 @@
+.card {
+    .card-body {
+        p.card-text, p {
+            font-size: $font-size-card;
+            padding-top: 10px;
+        }
+    }
+}
