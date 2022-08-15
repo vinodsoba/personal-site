@@ -3,7 +3,7 @@
      <div class="col-md-7">
       <div class="logo__image">
           <a href="<?php echo site_url(); ?>">
-            <img src="http://react-demo.local/wp-content/uploads/2022/05/Group-4.png"  alt="<?php echo $logo['alt']; ?>"/>
+            <img src="/wp-content/uploads/2022/05/Group-4.png"  alt="<?php echo $logo['alt']; ?>"/>
           </a>
       </div>
      </div>
