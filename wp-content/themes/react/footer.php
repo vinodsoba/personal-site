@@ -57,6 +57,6 @@
   </div>
 </footer>
 <?php wp_footer(); ?>
-<script src="http://react-demo.local/wp-content/themes/react/dist/js/animation.bundle.js"></script>
+<script src="https://www.vinodsoba.co.uk/wp-content/themes/react/dist/js/animation.bundle.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ class Search {
     }
 
     getResults() {
-       $.getJSON('http://react-demo.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+       $.getJSON('https://www.vinodsoba.co.uk/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
         this.resultsDiv.html(`
         <h2 class="search-overlay__section-title">General Information</h2>
         <ul class="link-list min-list">
