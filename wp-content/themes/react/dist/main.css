@@ -807,6 +807,11 @@ h1.section-title {
   background-size: cover;
   height: 100vh;
 }
+@media (max-width: 960px) {
+  .header__container {
+    height: 100%;
+  }
+}
 .header__container .logo__image {
   background-color: transparent;
 }
@@ -829,6 +834,11 @@ h1.section-title {
   font-size: 2em;
   margin: 0 auto;
   bottom: 1em;
+}
+@media (max-width: 960px) {
+  .header__container .down-arrow {
+    position: relative;
+  }
 }
 .header__container .down-arrow a {
   color: #fff;
@@ -904,7 +914,7 @@ h1.section-title {
 @media (max-width: 960px) {
   .homepage-banner__container {
     position: absolute;
-    top: 174px;
+    top: 132px;
   }
 }
 
@@ -936,8 +946,8 @@ h1.section-title {
 @media (max-width: 960px) {
   #banner-title h4 {
     font-size: 1.3em;
-    line-height: 35.2px;
-    padding: 36px;
+    line-height: 37.2px;
+    padding: 30px;
   }
 }
 #banner-title h2 {
@@ -946,9 +956,9 @@ h1.section-title {
 }
 @media (max-width: 960px) {
   #banner-title h2 {
-    font-size: 3.5em;
-    line-height: 63.2px;
-    max-width: 324px;
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 0.2px;
     width: 100%;
     margin: 0 auto;
   }
