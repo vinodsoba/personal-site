@@ -694,10 +694,10 @@ h1.section-title {
     transform: translateY(0);
     background-color: #579381;
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
-    position: absolute;
-    top: 85px;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0px;
+    right: 0;
     bottom: 0;
     z-index: 11;
   }
@@ -713,6 +713,12 @@ h1.section-title {
 .top-nav nav ul li {
   list-style: none;
   margin-right: 5px;
+}
+@media (max-width: 960px) {
+  .top-nav nav ul li {
+    font-size: 2em;
+    padding: 20px;
+  }
 }
 .top-nav nav ul li a {
   color: #fff;
@@ -734,6 +740,11 @@ h1.section-title {
   color: #fff;
 }
 @media (max-width: 960px) {
+  .top-nav .mobile-menu i:before {
+    font-size: 2em;
+  }
+}
+@media (max-width: 960px) {
   .top-nav .mobile-menu {
     visibility: visible;
     opacity: 1;
@@ -742,6 +753,12 @@ h1.section-title {
     position: absolute;
     width: 91%;
     top: 5px;
+    z-index: 111;
+  }
+}
+@media (max-width: 960px) {
+  .top-nav {
+    height: 22%;
   }
 }
 
@@ -792,6 +809,13 @@ h1.section-title {
 }
 .header__container .logo__image {
   background-color: transparent;
+}
+@media (max-width: 960px) {
+  .header__container .logo__image img {
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+  }
 }
 .header__container .down-arrow {
   position: absolute;
@@ -880,12 +904,19 @@ h1.section-title {
 @media (max-width: 960px) {
   .homepage-banner__container {
     position: absolute;
-    top: 108px;
+    top: 174px;
   }
 }
 
 #banner-title {
   text-align: center;
+}
+@media (max-width: 960px) {
+  #banner-title {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 87%;
+  }
 }
 #banner-title h2 {
   line-height: 70.2px;
@@ -907,11 +938,21 @@ h1.section-title {
   #banner-title h4 {
     font-size: 1.3em;
     line-height: 35.2px;
+    padding: 36px;
   }
 }
 #banner-title h2 {
   animation-name: moveInLeft;
   animation-duration: 2s;
+}
+@media (max-width: 960px) {
+  #banner-title h2 {
+    font-size: 3.5em;
+    line-height: 63.2px;
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 #banner-title h4 {
   animation-name: moveInRight;

@@ -28,13 +28,20 @@
     &__container {
         @include atMedium {
             position: absolute;
-            top: 108px;
+            top: 174px;
         }
     }
 }
 
 #banner-title {
     text-align: center;
+
+        @include atMedium {
+            margin: 0 auto;
+            max-width: 500px;
+            width: 87%;
+        }
+
     h2 {
         line-height: 70.2px;
         font-size: $font-size-xlarge; 
@@ -56,12 +63,21 @@
         @include atMedium {
             font-size: 1.3em;
             line-height: 35.2px;
+            padding: 36px;
         }
     }
 
     h2 {
         animation-name: moveInLeft;
         animation-duration: 2.0s;
+
+        @include atMedium {
+            font-size: 3.5em;
+            line-height: 63.2px;
+            max-width: 324px;
+            width: 100%;
+            margin: 0 auto;
+        }
        
     }
 

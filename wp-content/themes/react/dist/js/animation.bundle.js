@@ -126,7 +126,7 @@ var Search = /*#__PURE__*/function () {
     value: function getResults() {
       var _this = this;
 
-      jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://react-demo.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), function (posts) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('https://www.vinodsoba.co.uk/wp-json/wp/v2/posts?search=' + this.searchField.val(), function (posts) {
         _this.resultsDiv.html("\n        <h2 class=\"search-overlay__section-title\">General Information</h2>\n        <ul class=\"link-list min-list\">\n        <li><a href=\"".concat(posts[0].link, "\" style=\"color: #000\">").concat(posts[0].title.rendered, "</a></li>\n        </ul>"));
       });
     }

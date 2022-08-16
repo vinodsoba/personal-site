@@ -12,6 +12,15 @@
         .logo {
             &__image {
                 background-color: transparent;
+
+                @include atMedium {
+                    img {
+                        width: 130px;
+                        height: 130px;
+                        padding: 10px;
+                    }
+                }
+                
             }
         }
 

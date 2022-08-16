@@ -55,10 +55,10 @@
                 transform: translateY(0);
                 background-color: $green;
                 transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
-                position: absolute;
-                top: 85px;
+                position: fixed;
+                top: 0;
                 left: 0;
-                right: 0px;
+                right: 0;
                 bottom: 0;
                 z-index: 11;
               }
@@ -75,6 +75,11 @@
   li {
       list-style: none;
       margin-right: 5px;
+      
+        @include atMedium {
+          font-size: 2em;
+          padding: 20px;
+        }
   a {
       color: $white;
       text-decoration: none;
@@ -101,6 +106,11 @@
 
     i:before {
       color: $white;
+
+
+      @include atMedium { 
+        font-size: 2em;
+      }
     }
     
 
@@ -112,7 +122,12 @@
         position: absolute;
         width: 91%;
         top: 5px;
-        
+        z-index: 111;
     }
   }  
+
+  @include atMedium {
+    height: 22%;
+  }
+
 }
