@@ -8,6 +8,10 @@
         background-size: cover;
         height: 100vh;
 
+        @include atMedium {
+            height: 100%;
+        }
+
 
         .logo {
             &__image {
@@ -36,6 +40,10 @@
             font-size: 2em;  
             margin: 0 auto;
             bottom: 1em;
+
+                @include atMedium {
+                    position: relative;
+                }
 
             a {
                 color: $white;

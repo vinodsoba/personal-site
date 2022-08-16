@@ -28,7 +28,7 @@
     &__container {
         @include atMedium {
             position: absolute;
-            top: 174px;
+            top: 132px;
         }
     }
 }
@@ -61,8 +61,8 @@
 
         @include atMedium {
             font-size: 1.3em;
-            line-height: 35.2px;
-            padding: 36px;
+            line-height: 37.2px;
+            padding: 30px;
         }
     }
 
@@ -71,11 +71,12 @@
         animation-duration: 2.0s;
 
         @include atMedium {
-            font-size: 3.5em;
-            line-height: 63.2px;
-            max-width: 324px;
+            font-size: 1.7em;
+            font-weight: 600;
+            line-height: 0.2px;
             width: 100%;
             margin: 0 auto;
+
         }
        
     }
