@@ -6,14 +6,16 @@
         background-size: cover;
         background-color: $blend-grey;
         background-blend-mode: multiply;
+
+        @include atMedium {
+            height: 40vh;
+        }
         
              .about-us-banner {
 
             &__container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 40vh;
+
     
             #banner-title {
                 h2 {

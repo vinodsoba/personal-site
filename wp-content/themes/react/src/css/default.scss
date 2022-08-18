@@ -246,3 +246,9 @@ h1.section-title {
   text-transform: capitalize;
   text-align: center;
 }
+
+h2.content-title {
+  @include contentTitle;
+  font-weight: 600;
+  padding: 10px 0;
+}

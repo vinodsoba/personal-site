@@ -61,6 +61,7 @@
                 right: 0;
                 bottom: 0;
                 z-index: 11;
+                align-items: center;
               }
           }
         } 
@@ -120,9 +121,11 @@
         flex-direction: row-reverse;
         display: flex;
         position: absolute;
-        width: 91%;
+        width: 15%;
         top: 5px;
         z-index: 111;
+        right: 0;
+      
     }
   }  
 
