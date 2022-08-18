@@ -644,6 +644,13 @@ h1.section-title {
   text-align: center;
 }
 
+h2.content-title {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
 .top-nav {
   width: 100%;
   position: relative;
@@ -700,6 +707,7 @@ h1.section-title {
     right: 0;
     bottom: 0;
     z-index: 11;
+    align-items: center;
   }
 }
 .top-nav nav ul {
@@ -751,9 +759,10 @@ h1.section-title {
     flex-direction: row-reverse;
     display: flex;
     position: absolute;
-    width: 91%;
+    width: 15%;
     top: 5px;
     z-index: 111;
+    right: 0;
   }
 }
 @media (max-width: 960px) {
@@ -958,7 +967,6 @@ h1.section-title {
   #banner-title h2 {
     font-size: 1.7em;
     font-weight: 600;
-    line-height: 0.2px;
     width: 100%;
     margin: 0 auto;
   }
@@ -1014,10 +1022,12 @@ h1.section-title {
   background-color: #4e494e;
   background-blend-mode: multiply;
 }
+@media (max-width: 960px) {
+  .about__container {
+    height: 40vh;
+  }
+}
 .about__container .about-us-banner__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 40vh;
 }
 .about__container .about-us-banner__container #banner-title h2 {
