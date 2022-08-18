@@ -50,7 +50,7 @@
           <div class="col-md-9">
             <div class="copyright py1"><p>&copy; 2022 Vinod Soba - Web Developer in London & Across the UK. All Rights Reserved.</p></div>
           </div>
-          <div class="col-md-3">Social Icons</div>
+          <div class="col-md-3"><a href="https://www.linkedin.com/in/vinodsoba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
         </div>
         
         
