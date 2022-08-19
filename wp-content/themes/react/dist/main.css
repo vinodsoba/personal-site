@@ -756,13 +756,14 @@ h2.content-title {
   .top-nav .mobile-menu {
     visibility: visible;
     opacity: 1;
-    flex-direction: row-reverse;
+    flex-direction: row;
     display: flex;
     position: absolute;
     width: 15%;
     top: 5px;
     z-index: 111;
     right: 0;
+    margin-right: 45px;
   }
 }
 @media (max-width: 960px) {
@@ -934,6 +935,7 @@ h2.content-title {
   #banner-title {
     margin: 0 auto;
     width: 100%;
+    margin-top: 34px;
   }
 }
 #banner-title h2 {
@@ -944,7 +946,7 @@ h2.content-title {
 @media (max-width: 960px) {
   #banner-title h2 {
     font-size: 1.5em;
-    line-height: 57.2px;
+    line-height: 0.8;
   }
 }
 #banner-title h4 {
@@ -954,8 +956,8 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   #banner-title h4 {
-    font-size: 1.3em;
-    line-height: 37.2px;
+    font-size: 1em;
+    line-height: 1;
     padding: 30px;
   }
 }
@@ -965,7 +967,7 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   #banner-title h2 {
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-weight: 600;
     width: 100%;
     margin: 0 auto;
@@ -1052,6 +1054,11 @@ h2.content-title {
 .about__container .about-us-banner__container #banner-title .button__about-banner a:hover {
   background-color: beige;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 960px) {
+  .about__container .logo__image {
+    width: 90px;
+  }
 }
 
 .flex-container {
