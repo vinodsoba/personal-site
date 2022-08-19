@@ -30,7 +30,12 @@
   .col-md-7 {
     width: 66.333333%;
   }
-  
+
+  @include atMedium {
+    .col-md-3 {
+      height: 100%;
+    }
+  }  
   
   nav {
       display: flex;

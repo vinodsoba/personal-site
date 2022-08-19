@@ -679,6 +679,11 @@ h2.content-title {
 .top-nav .col-md-7 {
   width: 66.333333%;
 }
+@media (max-width: 960px) {
+  .top-nav .col-md-3 {
+    height: 100%;
+  }
+}
 .top-nav nav {
   display: flex;
   justify-content: end;
@@ -924,7 +929,7 @@ h2.content-title {
 @media (max-width: 960px) {
   .homepage-banner__container {
     position: absolute;
-    top: 132px;
+    top: 195px;
   }
 }
 
@@ -1045,7 +1050,7 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   .about__container .about-us-banner__container #banner-title .button__about-banner {
-    margin-top: 125px;
+    margin-top: 78px;
   }
 }
 .about__container .about-us-banner__container #banner-title .button__about-banner a {
