@@ -11,7 +11,7 @@
             height: 40vh;
         }
         
-             .about-us-banner {
+            .about-us-banner {
 
             &__container {
                 height: 40vh;
@@ -41,6 +41,14 @@
                     }
                 }
             }
+            }
+        }
+
+        .logo {
+            &__image {
+                @include atMedium {
+                    width: 90px;
+                }
             }
         }
     }

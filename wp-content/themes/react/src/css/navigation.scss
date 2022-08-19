@@ -118,13 +118,14 @@
     @include atMedium {
         visibility: visible;
         opacity: 1;
-        flex-direction: row-reverse;
+        flex-direction: row;
         display: flex;
         position: absolute;
         width: 15%;
         top: 5px;
         z-index: 111;
         right: 0;
+        margin-right: 45px;
       
     }
   }  

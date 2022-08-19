@@ -39,6 +39,7 @@
         @include atMedium {
             margin: 0 auto;
             width: 100%;
+            margin-top: 34px;
         }
 
     h2 {
@@ -48,7 +49,7 @@
 
         @include atMedium {
             font-size: 1.5em;
-            line-height: 57.2px;
+            line-height: 0.8;
         }
 
         
@@ -60,8 +61,8 @@
         color: $white;
 
         @include atMedium {
-            font-size: 1.3em;
-            line-height: 37.2px;
+            font-size: 1.0em;
+            line-height: 1.0;
             padding: 30px;
         }
     }
@@ -71,7 +72,7 @@
         animation-duration: 2.0s;
 
         @include atMedium {
-            font-size: 1.7em;
+            font-size: 1.2em;
             font-weight: 600;
             width: 100%;
             margin: 0 auto;
