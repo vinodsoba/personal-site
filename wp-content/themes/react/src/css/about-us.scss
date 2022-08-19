@@ -8,39 +8,49 @@
         background-blend-mode: multiply;
 
         @include atMedium {
-            height: 40vh;
+            height: 50vh;
         }
-        
+      
             .about-us-banner {
 
             &__container {
                 height: 40vh;
 
-    
-            #banner-title {
-                h2 {
-                    color: $white;
+                @include atMedium {
+                    height: 19vh;
+                    margin-top: 85px;
                 }
+
     
-                h4 {
-                    color: $white;
-                }
-                .button {
-                    &__about-banner {
-                    a {
-                        @include btn;
+                #banner-title {
+                    h2 {
                         color: $white;
-                        text-decoration: none;
-            
-                        &:hover {
-                        background-color: beige;
-                        transition: all 0.5s ease-in-out;
+                    }
+        
+                    h4 {
+                        color: $white;
+                    }
+                    .button {
+                        &__about-banner {
+
+                            @include atMedium {
+                                margin-top: 125px;
+                            }
+                        a {
+                            @include btn;
+                            color: $white;
+                            text-decoration: none;
+                
+                            &:hover {
+                            background-color: beige;
+                            transition: all 0.5s ease-in-out;
+                            }
+                        }
+                            
                         }
                     }
-                        
-                    }
                 }
-            }
+
             }
         }
 
@@ -86,10 +96,3 @@
     animation-duration: 1s;
     animation-iteration-count: 1;
 }
-
-   
-
-
-
-
-    

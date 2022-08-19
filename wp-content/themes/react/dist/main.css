@@ -935,7 +935,7 @@ h2.content-title {
   #banner-title {
     margin: 0 auto;
     width: 100%;
-    margin-top: 34px;
+    margin-top: -122px;
   }
 }
 #banner-title h2 {
@@ -1026,17 +1026,28 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   .about__container {
-    height: 40vh;
+    height: 50vh;
   }
 }
 .about__container .about-us-banner__container {
   height: 40vh;
+}
+@media (max-width: 960px) {
+  .about__container .about-us-banner__container {
+    height: 19vh;
+    margin-top: 85px;
+  }
 }
 .about__container .about-us-banner__container #banner-title h2 {
   color: #fff;
 }
 .about__container .about-us-banner__container #banner-title h4 {
   color: #fff;
+}
+@media (max-width: 960px) {
+  .about__container .about-us-banner__container #banner-title .button__about-banner {
+    margin-top: 125px;
+  }
 }
 .about__container .about-us-banner__container #banner-title .button__about-banner a {
   background-color: #579381;
