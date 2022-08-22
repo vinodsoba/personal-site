@@ -31,7 +31,7 @@ function pageAboutBanner($args = NULL) {
       <h2><?php echo $args['header_title']; ?></h2>
       <h4><?php echo $args['sub_header_title']; ?></h4>
     <?php
-      if($button && $buttonText){
+      if($args['cta_banner'] && $args['cta_text']){
     ?>
       <div class="button__about-banner">
           <a href="<?php echo $args['cta_banner']; ?>"><?php echo $args['cta_text']; ?></a>
