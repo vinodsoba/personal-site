@@ -1,9 +1,5 @@
 <?php
 get_header();
-pageAboutBanner(array(
-    'header_title' => 'Links to my portfolio',
-    'sub_header_title' => 'my sub text',
-));
 ?>
 
 <div class="container">
