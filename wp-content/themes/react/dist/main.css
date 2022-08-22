@@ -1373,6 +1373,17 @@ footer .copyright p {
   animation-delay: 0.5s;
 }
 
+.portfolio-section h3 {
+  padding-top: 1em;
+}
+.portfolio-section h1 {
+  text-align: center;
+}
+.portfolio-section a {
+  color: #000000;
+  text-decoration: none;
+}
+
 .myanimation__container a {
   background-color: #579381;
   padding: 9px 24px;
