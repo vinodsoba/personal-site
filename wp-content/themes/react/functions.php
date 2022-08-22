@@ -34,7 +34,7 @@ function pageAboutBanner($args = NULL) {
       if($args['cta_banner'] && $args['cta_text']){
     ?>
       <div class="button__about-banner">
-          <a href="<?php echo $args['cta_banner']; ?>"><?php echo $args['cta_text']; ?></a>
+          <a href="<?php echo $args['cta_banner'];?>" target="_blank"><?php echo $args['cta_text']; ?></a>
       </div>
 
   <?php
