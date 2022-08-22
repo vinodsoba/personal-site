@@ -1,5 +1,97 @@
 <?php
 
+function pageAboutBanner($args = NULL) {
+  if(!$args['header_title']) {
+    $args['header_title'] = get_field('header_title');
+  }
+
+  if(!$args['sub_header_title']) {
+    $args['sub_header_title'] = get_field('sub_header_title');
+  }
+
+  if(!$args['home_page_banner']) {
+    if(get_field('home_page_banner')) {
+      $args['home_page_banner'] = get_field('home_page_banner')['sizes']['pageBanner'];
+    } else {
+      $args['home_page_banner'] = get_theme_file_uri('/images/ocean.jpg');
+    }
+   }
+
+  if(!$args['cta_banner']) {
+    $args['cta_banner'] = get_field('cta_banner');
+  }
+
+  if(!$args['cta_text']) {
+    $args['cta_text'] = get_field('cta_text');
+  }
+  ?>
+
+  <div class="about-us-banner__container">
+    <div id="banner-title">
+      <h2><?php echo $args['header_title']; ?></h2>
+      <h4><?php echo $args['sub_header_title']; ?></h4>
+    <?php
+      if($button && $buttonText){
+    ?>
+      <div class="button__about-banner">
+          <a href="<?php echo $args['cta_banner']; ?>"><?php echo $args['cta_text']; ?></a>
+      </div>
+
+  <?php
+      } else {
+  ?>
+  <div class="button__about-banner"></div>
+  <?php 
+  }
+  ?>
+
+</div>
+</div>
+<?php
+}
+
+function pageBanner($args = NULL) {
+  if(!$args['header_title']) {
+    $args['header_title'] = get_field('header_title');
+  }
+
+  if(!$args['sub_header_title']) {
+    $args['sub_header_title'] = get_field('sub_header_title');
+  }
+
+  if(!$args['home_page_banner']) {
+   if(get_field('home_page_banner')) {
+     $args['home_page_banner'] = get_field('home_page_banner')['sizes']['pageBanner'];
+   } else {
+     $args['home_page_banner'] = get_theme_file_uri('/images/ocean.jpg');
+   }
+  }
+
+  if(!$args['cta_banner']) {
+    $args['cta_banner'] = get_field('cta_banner');
+  }
+
+  if(!$args['cta_text']) {
+    $args['cta_text'] = get_field('cta_text');
+  }
+
+  ?>
+
+  <div class="homepage-banner__container row mt7 mb8">
+    <div id="banner-title">
+
+      <h2><?php echo $args['header_title']; ?></h2>
+      <h4><?php echo $args['sub_header_title']; ?></h4>
+
+      <div class="button__homepage-banner py2">
+          <a href="<?php echo $args['cta_banner']; ?>">My Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+<?php
+}
+
 function boilerplate_load_assets() {
   //wp_enqueue_script('ourmainjs', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_script('custom', get_theme_file_uri('/src/js/custom.js'), array('jquery'), '1.0', true);
