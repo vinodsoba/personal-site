@@ -2,7 +2,9 @@
 
 $myPortfolio = new WP_Query(array(
     'post_type' => 'portfolio',
-    'post_per_page' => -1,
+    'orderby'   => 'date',
+    'order' => 'ASC',
+    'posts_per_page' => 6,
 ));
 
 ?>

@@ -9,9 +9,16 @@
   <body <?php body_class(); ?>>
 <?php
   $bannerBackground = get_field('home_page_banner'); 
+  if(!$bannerBackground) {
+    if(get_field('home_page_banner')) {
+      $bannerBackground = get_field('home_page_banner');
+    } else {
+      $bannerBackground = get_theme_file_uri('/images/ocean.jpg');
+    }
+   }
   if(!$bannerBackground ){
   ?>
-    <header class="header__container" style="background-color: blue;">
+    <header class="header__container" style="background-image: url('<?php echo $bannerBackground ?>')">
   <?php
       get_template_part( 'template-parts/page-navigation' );
         
