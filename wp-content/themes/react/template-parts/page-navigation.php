@@ -1,6 +1,6 @@
   <!-- controls the nav and logo-->
   <div class="top-nav row">
-     <div class="col-md-7">
+     <div class="col-md-5 col-lg-6">
       <div class="logo__image">
           <a href="<?php echo site_url(); ?>">
             <img src="/wp-content/uploads/2022/05/Group-4.png"  alt="<?php echo $logo['alt']; ?>"/>
@@ -8,7 +8,7 @@
       </div>
      </div>
         
-     <div class="col-md-3">
+     <div class="col-md-5 col-lg-5">
         <nav class="nav__menu py1">
           <?php
           wp_nav_menu(array( 
