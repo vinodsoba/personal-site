@@ -9,7 +9,7 @@ export class Pages extends Component {
     }
 
     componentDidMount(){
-        const getPage = axios.get('http://react-demo.local/wp-json/wp/v2/pages?search=home')
+        const getPage = axios.get('http://react-demo.local/wp-json/wp/v2/pages?search=contact')
          .then(res => this.setState({
              pages: res.data,
              isLoaded: true
@@ -30,7 +30,7 @@ export class Pages extends Component {
           );
      }
 
-     return ( <div>Loading..</div>);
+     return ( <div>Loading...</div>);
     
   }
 }
