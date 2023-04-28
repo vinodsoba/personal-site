@@ -20,6 +20,8 @@ function my_enqueue_theme_js() {
     time(), // Change this to null for production
     true
   );
+
+  wp_enqueue_style( 'customcss', get_theme_file_uri('/dist/main.css'));
 }
 
 add_action( 'wp_enqueue_scripts', 'my_enqueue_theme_js' );

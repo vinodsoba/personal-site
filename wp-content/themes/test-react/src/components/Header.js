@@ -3,9 +3,6 @@ import Logo from './Logo';
 import styled  from 'styled-components';
 import Navigation from './Nav';
 
-
-
-
 const HeaderContainer = styled.div `
     padding: 20px;
     background-image: blue;
@@ -34,6 +31,7 @@ class Header extends Component {
     render() { 
       const { acf } = this.props.page;
         return (
+           
             <HeaderContainer style={{ backgroundImage : "url(${acf})" }} >
                     <Logo />
                     <Button bg="white">My Button</Button>
