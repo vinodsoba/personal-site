@@ -5,6 +5,8 @@
 /wp-content/themes/react/build
 /wp-content/themes/test-react/build
 wp-config.php*
+websiteBackup_280423.zip
+/wp-content/themes/react/package-lock.json
 
 /db-backup*
 
