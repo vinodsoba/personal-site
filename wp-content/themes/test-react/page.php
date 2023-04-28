@@ -1,7 +1,12 @@
-<?php
-get_header();
+<?php 
+
+while(have_posts()){
+    the_post();
 ?>
-        
-This is a single page.
+    <div class="shop">
+        <span class="product-title"><?php echo the_content(); ?></span>
+    </div>
+<?php
+}
+?>
     
-<?php get_footer(); ?>
