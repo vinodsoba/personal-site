@@ -1,10 +1,10 @@
-/*!**********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./src/css/main.scss ***!
-  \**********************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/main.scss ***!
+  \************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap);
-/*!**************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./src/css/main.scss (1) ***!
-  \**************************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/main.scss (1) ***!
+  \****************************************************************************************************************/
 /* SASS and Global'ish Stuff */
 @keyframes moveInLeft {
   0% {
@@ -83,7 +83,7 @@
   padding: 9px 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 .button__homepage-banner a:hover {
@@ -859,10 +859,8 @@ h2.content-title {
   color: #fff;
 }
 .header__container .down-arrow .fa-arrow-down {
-  animation: pulse;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s;
-  /* don't forget to set a duration! */
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
   animation-iteration-count: infinite;
   font-size: 1em;
 }
