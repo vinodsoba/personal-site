@@ -1037,13 +1037,13 @@ h2.content-title {
 @media (max-width: 960px) {
   .about__container .about-us-banner__container {
     position: absolute;
-    top: 76px;
+    top: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: auto;
   }
 }
 .about__container .about-us-banner__container #banner-title h2 {
