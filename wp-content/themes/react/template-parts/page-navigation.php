@@ -8,7 +8,7 @@
       </div>
      </div>
         
-     <div class="col-md-5 col-lg-5">
+     <div class="col-md-5 col-lg-5 navigation-menu">
         <nav class="nav__menu py1">
           <?php
           wp_nav_menu(array( 

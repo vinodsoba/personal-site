@@ -1028,7 +1028,7 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   .about__container {
-    height: 50vh;
+    height: auto;
   }
 }
 .about__container .about-us-banner__container {
@@ -1036,8 +1036,14 @@ h2.content-title {
 }
 @media (max-width: 960px) {
   .about__container .about-us-banner__container {
-    height: 19vh;
-    margin-top: 85px;
+    position: absolute;
+    top: 76px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
   }
 }
 .about__container .about-us-banner__container #banner-title h2 {
