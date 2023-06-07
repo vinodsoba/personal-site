@@ -15,7 +15,7 @@ add_action( 'rest_api_init', 'react_custom_rest');
 function my_enqueue_theme_js() {
   wp_enqueue_script(
     'test-react',
-    get_stylesheet_directory_uri() . '/build/index.js',
+    get_stylesheet_directory_uri() . '/dist/animation.bundle.js',
     ['wp-element'],
     time(), // Change this to null for production
     true

@@ -6,7 +6,7 @@ $skillContent = new WP_Query(array(
 ));
 ?>
 <section id="section1" class="section-myskils container pt2 pb2">
-    <h1 class="section-title pt1 pb1">MY SKILLS</h1>
+    <h3 class="section-title pt1 pb1">MY SKILLS</h3>
 <div class="row skill__container">
     
 <?php

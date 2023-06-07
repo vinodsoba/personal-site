@@ -8,7 +8,7 @@ $myServices = new WP_Query(array(
 ?>
 
 <section class="myservices my2 py2 px2 ">
-<h1 class="section-title pt1 pb1">MY SERVICES</h1>
+<h3 class="section-title pt1 pb1">MY SERVICES</h3>
 <div class="myservices__container">
 <div class="container">
     <div class="row">

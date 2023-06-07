@@ -28,8 +28,8 @@ function pageAboutBanner($args = NULL) {
 
   <div class="about-us-banner__container">
     <div id="banner-title">
-      <h2><?php echo $args['header_title']; ?></h2>
-      <h4><?php echo $args['sub_header_title']; ?></h4>
+      <h1><?php echo $args['header_title']; ?></h1>
+      <h2><?php echo $args['sub_header_title']; ?></h2>
     <?php
       if($args['cta_banner'] && $args['cta_text']){
     ?>
@@ -80,8 +80,8 @@ function pageBanner($args = NULL) {
   <div class="homepage-banner__container row mt7 mb8">
     <div id="banner-title">
 
-      <h2><?php echo $args['header_title']; ?></h2>
-      <h4><?php echo $args['sub_header_title']; ?></h4>
+      <h1><?php echo $args['header_title']; ?></h1>
+      <h2><?php echo $args['sub_header_title']; ?></h2>
 
       <div class="button__homepage-banner py2">
           <a href="<?php echo $args['cta_banner']; ?>">My Portfolio</a>

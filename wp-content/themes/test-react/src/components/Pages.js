@@ -9,7 +9,7 @@ export class Pages extends Component {
     }
 
     componentDidMount(){
-        const getPage = axios.get('http://react-demo.local/wp-json/wp/v2/pages?search=contact')
+        const getPage = axios.get('http://react-demo.local/wp-json/wp/v2/portfolio')
          .then(res => this.setState({
              pages: res.data,
              isLoaded: true
