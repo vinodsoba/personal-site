@@ -1,5 +1,5 @@
 <section class="myanimation my2 py2 px2 ">
-<h1 class="section-title pt1 pb1">ANIMATION</h1>
+<h3 class="section-title pt1 pb1">ANIMATION</h3>
 <div class="myanimation__container">
 <div class="container">
     <div class="row">
