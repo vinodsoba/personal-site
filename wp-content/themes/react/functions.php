@@ -147,3 +147,57 @@ function mywebsite_adjust_queries($query) {
 }
 
 add_action('pre_get_posts', 'mywebsite_adjust_queries');
+
+/* rest api header and footer menu*/
+
+function footer_menu_link() {
+  $menu = wp_get_nav_menu_items('footer');
+
+  return $menu;
+  exit();
+
+  $result =[];
+  foreach($menu as $item) {
+    $my_item = [
+      'name' => $item->title,
+      'href' => $item->url
+    ];
+    $result[] = $my_item;
+  }
+  return $result;
+}
+
+add_action('rest_api_init', function() {
+
+     // footer links menu 
+      register_rest_route( 'wp/v2', 'footer-links', array(
+        'methods' => 'GET',
+        'callback' => 'footer_menu_link'
+      ));
+});
+
+function header_main_menu() {
+  $menu = wp_get_nav_menu_items('Header Menu 1');
+
+  return $menu;
+  exit();
+
+  $result =[];
+  foreach($menu as $item) {
+    $my_item = [
+      'name' => $item->title,
+      'href' => $item->url
+    ];
+    $result[] = $my_item;
+  }
+  return $result;
+}
+
+add_action('rest_api_init', function() {
+
+     // footer links menu 
+      register_rest_route( 'wp/v2', 'header-main-menu', array(
+        'methods' => 'GET',
+        'callback' => 'header_main_menu'
+      ));
+});
